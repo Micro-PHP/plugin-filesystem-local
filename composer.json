@@ -1,5 +1,5 @@
 {
-    "name": "micro/plugin-filesystem-local-adapter",
+    "name": "micro/plugin-filesystem-local",
     "type": "library",
     "license": "MIT",
     "version": "1.0",
