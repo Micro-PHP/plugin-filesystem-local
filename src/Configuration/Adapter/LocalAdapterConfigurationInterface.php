@@ -56,11 +56,4 @@ interface LocalAdapterConfigurationInterface extends FilesystemAdapterConfigurat
      * @return int
      */
     public function getPermissionPrivateFile(): int;
-
-    /**
-     * @return string
-     *
-     * @see Visibility
-     */
-    public function getDefaultVisibilityForDirectories(): string;
 }

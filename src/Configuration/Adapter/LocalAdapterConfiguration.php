@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Micro\Plugin\Filesystem\Adapter\Local\Configuration\Adapter;
 
 use League\Flysystem\Local\LocalFilesystemAdapter;
-use League\Flysystem\Visibility;
+use Micro\Framework\Kernel\Configuration\Exception\InvalidConfigurationException;
 use Micro\Plugin\Filesystem\Configuration\Adapter\AbstractFilesystemAdapterConfiguration;
 
 class LocalAdapterConfiguration extends AbstractFilesystemAdapterConfiguration implements LocalAdapterConfigurationInterface
@@ -27,7 +27,6 @@ class LocalAdapterConfiguration extends AbstractFilesystemAdapterConfiguration i
     public const CFG_PERMISSION_DIR_PUBLIC = 'MICRO_FS_%s_PERMISSION_DIR_PUBLIC';
     public const CFG_PERMISSION_FILE_PRIVATE = 'MICRO_FS_%s_PERMISSION_FILE_PRIVATE';
     public const CFG_PERMISSION_DIR_PRIVATE = 'MICRO_FS_%s_PERMISSION_DIR_PRIVATE';
-    public const CFG_DIR_VISIBILITY_DEFAULT = 'MICRO_FS_%s_DIR_VISIBILITY_DEFAULT';
 
     /**
      * {@inheritDoc}
@@ -50,7 +49,19 @@ class LocalAdapterConfiguration extends AbstractFilesystemAdapterConfiguration i
      */
     public function getLinkHeading(): int
     {
-        return (int) $this->get(self::CFG_LINKS_HANDLING, LocalFilesystemAdapter::DISALLOW_LINKS);
+        $allowed = [
+            LocalFilesystemAdapter::DISALLOW_LINKS,
+            LocalFilesystemAdapter::SKIP_LINKS,
+        ];
+
+        $value = $this->get(self::CFG_LINKS_HANDLING, LocalFilesystemAdapter::DISALLOW_LINKS);
+
+        $_value = (int) $value;
+        if (\in_array($_value, $allowed)) {
+            return $_value;
+        }
+
+        throw new InvalidConfigurationException(sprintf('Configuration key "%s" has invalid value `%s`. Allowed values: `%s`', $this->cfg(self::CFG_LINKS_HANDLING), (string) $value, implode(', ', $allowed)));
     }
 
     /**
@@ -91,13 +102,5 @@ class LocalAdapterConfiguration extends AbstractFilesystemAdapterConfiguration i
     public function getPermissionPrivateFile(): int
     {
         return (int) $this->get(self::CFG_PERMISSION_FILE_PRIVATE, 7604);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getDefaultVisibilityForDirectories(): string
-    {
-        return $this->get(self::CFG_DIR_VISIBILITY_DEFAULT, Visibility::PRIVATE);
     }
 }

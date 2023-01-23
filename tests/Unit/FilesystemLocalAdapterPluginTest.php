@@ -26,6 +26,7 @@ class FilesystemLocalAdapterPluginTest extends TestCase
             [
                 'MICRO_FS_DEFAULT_TYPE' => 'local',
                 'MICRO_FS_DEFAULT_ROOT_PATH' => '/tmp/micro/fs',
+                'MICRO_FS_DEFAULT_LINK_HANDLING' => '1',
             ],
             [
                 FilesystemLocalAdapterPlugin::class,
@@ -37,7 +38,9 @@ class FilesystemLocalAdapterPluginTest extends TestCase
         $facade = $kernel->container()->get(FilesystemFacadeInterface::class);
         $operator = $facade->createFsOperator('default');
 
-        $operator->write('temporary', 'success');
-        $this->assertEquals('success', $operator->read('temporary'));
+        $location = 'temporary';
+        $operator->write($location, 'success');
+        $this->assertEquals('success', $operator->read($location));
+        $operator->delete($location);
     }
 }
