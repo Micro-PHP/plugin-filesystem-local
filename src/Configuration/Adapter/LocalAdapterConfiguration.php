@@ -1,5 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ *  This file is part of the Micro framework package.
+ *
+ *  (c) Stanislau Komar <kost@micro-php.net>
+ *
+ *  For the full copyright and license information, please view the LICENSE
+ *  file that was distributed with this source code.
+ */
+
 namespace Micro\Plugin\Filesystem\Adapter\Local\Configuration\Adapter;
 
 use League\Flysystem\Local\LocalFilesystemAdapter;
@@ -8,15 +19,15 @@ use Micro\Plugin\Filesystem\Configuration\Adapter\AbstractFilesystemAdapterConfi
 
 class LocalAdapterConfiguration extends AbstractFilesystemAdapterConfiguration implements LocalAdapterConfigurationInterface
 {
-    const CFG_ROOT_DIRECTORY = 'MICRO_FS_%s_ROOT_PATH';
-    const CFG_LINKS_HANDLING = 'MICRO_FS_%s_LINK_HANDLING';
-    const CFG_WRITE_FLAGS = 'MICRO_FS_%s_WRITE_FLAGS';
-    const CFG_IS_LAZY_ROOT_CREATION = 'MICRO_FS_%s_LAZY_ROOT_CREATION';
-    const CFG_PERMISSION_FILE_PUBLIC = 'MICRO_FS_%s_PERMISSION_FILE_PUBLIC';
-    const CFG_PERMISSION_DIR_PUBLIC = 'MICRO_FS_%s_PERMISSION_DIR_PUBLIC';
-    const CFG_PERMISSION_FILE_PRIVATE = 'MICRO_FS_%s_PERMISSION_FILE_PRIVATE';
-    const CFG_PERMISSION_DIR_PRIVATE = 'MICRO_FS_%s_PERMISSION_DIR_PRIVATE';
-    const CFG_DIR_VISIBILITY_DEFAULT = 'MICRO_FS_%s_DIR_VISIBILITY_DEFAULT';
+    public const CFG_ROOT_DIRECTORY = 'MICRO_FS_%s_ROOT_PATH';
+    public const CFG_LINKS_HANDLING = 'MICRO_FS_%s_LINK_HANDLING';
+    public const CFG_WRITE_FLAGS = 'MICRO_FS_%s_WRITE_FLAGS';
+    public const CFG_IS_LAZY_ROOT_CREATION = 'MICRO_FS_%s_LAZY_ROOT_CREATION';
+    public const CFG_PERMISSION_FILE_PUBLIC = 'MICRO_FS_%s_PERMISSION_FILE_PUBLIC';
+    public const CFG_PERMISSION_DIR_PUBLIC = 'MICRO_FS_%s_PERMISSION_DIR_PUBLIC';
+    public const CFG_PERMISSION_FILE_PRIVATE = 'MICRO_FS_%s_PERMISSION_FILE_PRIVATE';
+    public const CFG_PERMISSION_DIR_PRIVATE = 'MICRO_FS_%s_PERMISSION_DIR_PRIVATE';
+    public const CFG_DIR_VISIBILITY_DEFAULT = 'MICRO_FS_%s_DIR_VISIBILITY_DEFAULT';
 
     /**
      * {@inheritDoc}
