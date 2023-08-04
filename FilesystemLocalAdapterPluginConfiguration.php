@@ -11,10 +11,10 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Adapter\Local;
+namespace Micro\Plugin\FilesystemAdapter\Local;
 
-use Micro\Plugin\Filesystem\Adapter\Local\Configuration\Adapter\LocalAdapterConfiguration;
-use Micro\Plugin\Filesystem\Adapter\Local\Configuration\FilesystemLocalAdapterPluginConfigurationInterface;
+use Micro\Plugin\FilesystemAdapter\Local\Configuration\Adapter\LocalAdapterConfiguration;
+use Micro\Plugin\FilesystemAdapter\Local\Configuration\FilesystemLocalAdapterPluginConfigurationInterface;
 use Micro\Plugin\Filesystem\Configuration\Adapter\FilesystemAdapterConfigurationInterface;
 use Micro\Plugin\Filesystem\FilesystemPluginConfiguration;
 

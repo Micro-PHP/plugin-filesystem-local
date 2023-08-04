@@ -11,10 +11,10 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Adapter\Local\Decorator;
+namespace Micro\Plugin\FilesystemAdapter\Local\Decorator;
 
 use League\Flysystem\FilesystemOperator;
-use Micro\Plugin\Filesystem\Adapter\Local\Configuration\FilesystemLocalAdapterPluginConfigurationInterface;
+use Micro\Plugin\FilesystemAdapter\Local\Configuration\FilesystemLocalAdapterPluginConfigurationInterface;
 use Micro\Plugin\Filesystem\Business\FS\FsFactoryInterface;
 use Micro\Plugin\Filesystem\Configuration\FilesystemPluginConfigurationInterface;
 use Micro\Plugin\Filesystem\Facade\FilesystemFacadeInterface;

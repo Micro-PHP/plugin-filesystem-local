@@ -11,11 +11,11 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Adapter\Local\Test\Unit\Configuration\Adapter;
+namespace Micro\Plugin\FilesystemAdapter\Local\Tests\Unit\Configuration\Adapter;
 
-use Micro\Framework\Kernel\Configuration\DefaultApplicationConfiguration;
-use Micro\Framework\Kernel\Configuration\Exception\InvalidConfigurationException;
-use Micro\Plugin\Filesystem\Adapter\Local\Configuration\Adapter\LocalAdapterConfiguration;
+use Micro\Framework\BootConfiguration\Configuration\DefaultApplicationConfiguration;
+use Micro\Framework\BootConfiguration\Configuration\Exception\InvalidConfigurationException;
+use Micro\Plugin\FilesystemAdapter\Local\Configuration\Adapter\LocalAdapterConfiguration;
 use PHPUnit\Framework\TestCase;
 
 class LocalAdapterConfigurationTest extends TestCase

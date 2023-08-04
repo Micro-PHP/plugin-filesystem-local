@@ -11,7 +11,7 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Adapter\Local\Configuration;
+namespace Micro\Plugin\FilesystemAdapter\Local\Configuration;
 
 use Micro\Plugin\Filesystem\Configuration\FilesystemPluginConfigurationInterface;
 

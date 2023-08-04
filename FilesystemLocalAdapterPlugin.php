@@ -11,16 +11,16 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Adapter\Local;
+namespace Micro\Plugin\FilesystemAdapter\Local;
 
-use Micro\Component\DependencyInjection\Container;
-use Micro\Framework\Kernel\Plugin\ConfigurableInterface;
-use Micro\Framework\Kernel\Plugin\DependencyProviderInterface;
-use Micro\Framework\Kernel\Plugin\PluginConfigurationTrait;
-use Micro\Framework\Kernel\Plugin\PluginDependedInterface;
-use Micro\Plugin\Filesystem\Adapter\Local\Business\Adapter\AdapterFactory;
-use Micro\Plugin\Filesystem\Adapter\Local\Configuration\FilesystemLocalAdapterPluginConfigurationInterface;
-use Micro\Plugin\Filesystem\Adapter\Local\Decorator\LocalFilesystemFacadeDecorator;
+use Micro\Framework\DependencyInjection\Container;
+use Micro\Framework\BootConfiguration\Plugin\ConfigurableInterface;
+use Micro\Framework\BootDependency\Plugin\DependencyProviderInterface;
+use Micro\Framework\BootConfiguration\Plugin\PluginConfigurationTrait;
+use Micro\Framework\BootPluginDependent\Plugin\PluginDependedInterface;
+use Micro\Plugin\FilesystemAdapter\Local\Business\Adapter\AdapterFactory;
+use Micro\Plugin\FilesystemAdapter\Local\Configuration\FilesystemLocalAdapterPluginConfigurationInterface;
+use Micro\Plugin\FilesystemAdapter\Local\Decorator\LocalFilesystemFacadeDecorator;
 use Micro\Plugin\Filesystem\Business\Adapter\AdapterFactoryInterface;
 use Micro\Plugin\Filesystem\Business\FS\FsFactory;
 use Micro\Plugin\Filesystem\Business\FS\FsFactoryInterface;

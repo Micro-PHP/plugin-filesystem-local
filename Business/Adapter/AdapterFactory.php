@@ -11,12 +11,12 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Adapter\Local\Business\Adapter;
+namespace Micro\Plugin\FilesystemAdapter\Local\Business\Adapter;
 
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\Local\LocalFilesystemAdapter;
 use League\Flysystem\UnixVisibility\PortableVisibilityConverter;
-use Micro\Plugin\Filesystem\Adapter\Local\Configuration\Adapter\LocalAdapterConfigurationInterface;
+use Micro\Plugin\FilesystemAdapter\Local\Configuration\Adapter\LocalAdapterConfigurationInterface;
 use Micro\Plugin\Filesystem\Business\Adapter\AdapterFactoryInterface;
 use Micro\Plugin\Filesystem\Configuration\Adapter\FilesystemAdapterConfigurationInterface;
 

@@ -11,10 +11,10 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Adapter\Local\Test\Unit;
+namespace Micro\Plugin\FilesystemAdapter\Local\Tests\Unit;
 
-use Micro\Kernel\App\AppKernel;
-use Micro\Plugin\Filesystem\Adapter\Local\FilesystemLocalAdapterPlugin;
+use Micro\Framework\KernelApp\AppKernel;
+use Micro\Plugin\FilesystemAdapter\Local\FilesystemLocalAdapterPlugin;
 use Micro\Plugin\Filesystem\Facade\FilesystemFacadeInterface;
 use PHPUnit\Framework\TestCase;
 

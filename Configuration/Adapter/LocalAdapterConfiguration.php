@@ -11,10 +11,10 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Adapter\Local\Configuration\Adapter;
+namespace Micro\Plugin\FilesystemAdapter\Local\Configuration\Adapter;
 
 use League\Flysystem\Local\LocalFilesystemAdapter;
-use Micro\Framework\Kernel\Configuration\Exception\InvalidConfigurationException;
+use Micro\Framework\BootConfiguration\Configuration\Exception\InvalidConfigurationException;
 use Micro\Plugin\Filesystem\Configuration\Adapter\AbstractFilesystemAdapterConfiguration;
 
 class LocalAdapterConfiguration extends AbstractFilesystemAdapterConfiguration implements LocalAdapterConfigurationInterface
